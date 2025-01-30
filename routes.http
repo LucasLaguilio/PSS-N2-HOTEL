@@ -1,0 +1,44 @@
+POST http://localhost:3333/hospedagens
+Content-Type: application/json
+
+{
+    "hotel": "Hotel 01",
+    "hospede": "Hospede 01, Hospede 02", 
+    "quarto": 0
+    
+}
+
+###
+GET http://localhost:3333/hospedagens
+
+###
+GET http://localhost:3333/hospedagens?search=Ibis
+
+###
+PUT http://localhost:3333/hospedagens/430d86ac-f9b9-4728-9b7b-b54aa8c4dbe8
+Content-Type: application/json
+
+{
+    "hotel": "Ibis",
+    "hospede": "Lucas Laguilio, JVis, Sheshe", 
+    "quarto": 101,
+    "checkin": "25-12-2025",
+    "checkout": "30-12-2025",
+    "nhospedes": 3
+     
+}
+
+###
+PATCH http://localhost:3333/hospedagens/430d86ac-f9b9-4728-9b7b-b54aa8c4dbe8
+Content-Type: application/json
+
+{
+    "hotel": "Hotel Espanha",
+    "hospede": "Lucas"
+
+
+      
+}
+
+###
+DELETE http://localhost:3333/hospedagens/430d86ac-f9b9-4728-9b7b-b54aa8c4dbe8
